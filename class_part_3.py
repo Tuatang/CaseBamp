@@ -14,7 +14,7 @@ class Content:
 class ToDo(Element):
 	numberic_id = 0
 	id = "100" + str(numberic_id)
-	def __init__(self, title, content, start_date, end_date, completed, over_due, added_by, assigned_to, notify_who_when_done):
+	def __init__(self, title, content, start_date, end_date, added_by, assigned_to, notify_who_when_done):
 		super.__init__(title, id)
 		self.__content = content
 		self.__start_date = start_date
@@ -57,7 +57,7 @@ class DocumentOrFile(Element):
 		self.__content = content
 		self.__added_user = added_user
 		self.__last_uploaded_date = last_uploaded_date
-		
+
 		numberic_id += 1
 		id += str(numberic_id)
 
@@ -84,3 +84,9 @@ class DocumentAndFilesFolder(Element):
 		pass
 	def save_document_or_file(document_or_file):
 		pass
+
+if __name__ == "main":
+	sample_to_dos_topic = ToDosTopic("Sameple Todo Topic", "Sample Description")
+	sample_to_do = ToDo("Sample Todo", "Sameple Content", datetime.now(), datetime.now(), "Thanaphat", "Nicharat", "Thanaphat")
+	sample_document_or_file = DocumentOrFile("Sample Document or File", "Sample Content", "Thanaphat", datetime.now())
+	sample_documents_and_files_folder = DocumentAndFilesFolder("Sample Folder Name")
