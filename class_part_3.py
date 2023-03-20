@@ -57,6 +57,9 @@ class DocumentOrFile(Element):
 		self.__content = content
 		self.__added_user = added_user
 		self.__last_uploaded_date = last_uploaded_date
+		
+		numberic_id += 1
+		id += str(numberic_id)
 
 	def set_attribute(attribute, value):
 		pass
@@ -69,6 +72,9 @@ class DocumentAndFilesFolder(Element):
 		self.__title = title
 		self.__list_of_folders = []
 		self.__list_of_docs_and_files = []
+
+		numberic_id += 1
+		id += str(numberic_id)
 
 	def create_document_or_file(documents_and_files_folder, title, content, added_user, last_uploaded_date):
 		pass
