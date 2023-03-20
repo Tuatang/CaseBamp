@@ -9,7 +9,7 @@ class Organization :
         self.__organization_member = []
         self.__notifications = []
         self.__projects = []
-        self.__activity_log = []
+        # self.__activity_log = activity_log
 
     def show_projects(self) :
         if self.__projects is not None:
