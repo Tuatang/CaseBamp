@@ -27,4 +27,3 @@ class User:
         pass
     def get_private_chat(self):
         pass
-    

@@ -71,6 +71,7 @@ class Event(Element):
 
         numberic_id += 1
         id += str(numberic_id)
+        
 
     def set_attribute(self, attribute, value):
         pass
