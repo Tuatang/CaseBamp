@@ -16,6 +16,9 @@ class Project :
         # self.__message_board = message_board
         self.__in_trash = False
 
+    def __str__ (self):
+        return 'Project: ' + str(self.__project_name) + ' Description: ' + str(self.__project_description) + ' Interval: ' + str(self.__start_date) + ' :: ' + str(self.__end_date)
+
     def get_todo_topics(self) :
         if self.__todo_topics != None:
             return self.__todo_topics
