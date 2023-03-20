@@ -11,13 +11,18 @@ class Organization :
         self.__projects = []
         self.__activity_log = []
 
+    def show_projects(self) :
+        if self.__projects is not None:
+            for p in self.__projects :
+                print(p)
+
     def add_project(self, project) :
         self.__projects.append(project)
 
     def create_project(self, name, description, start_date, end_date) :
         name = Project(name, description, start_date, end_date)
         self.add_project(name)
-        
+
     def add_owner(self, user) :
         pass
 
