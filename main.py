@@ -1,8 +1,22 @@
+from organization import Organization
+from project import Project
+from activity import ActivityLog, Activity
 from messageandchat import *
 from datetime import datetime
 from useraccount import *
 
-def main():
+def main() :
+    organization_1 = Organization("KMITL")
+    project_1 = Project("Project1", "project1", "20-03-2023", "20-03-2023")
+    organization_1.add_project(project_1)
+    organization_1.create_project("Sleep", "Relax", "15-03-2023", "20-03-2023")
+    organization_1.show_projects()
+
+    activity_log_1 = ActivityLog()
+    activity_1 = Activity("Testing", "20-03-2023", "Adam")
+    activity_log_1.save_activity(activity_1)
+    activity_log_1.show_activity()
+    
     account = Account("pond", "pond1234")
     user1 = User("65010539@kmitl.ac.th", "Pond", "0812345678", "KMITL", False, False)
     user1.edit_profile("Pond", "0812345678")
@@ -26,7 +40,6 @@ def main():
     event1 = Event("Event 1", Content("Details"), datetime.now(), datetime.now(), True, ["User 1", "User 2"])
     event2 = Event("Event 2", Content("Details"), datetime.now(), datetime.now(), True, ["User 1", "User 2"])
 
-if __name__ == "__main__":
+if __name__ == "__main__" :
     main()
 
-#edit
